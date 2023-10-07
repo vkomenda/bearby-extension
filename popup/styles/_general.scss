@@ -1,0 +1,57 @@
+// @import "./fonts";
+@import "./mixins";
+@import "./theme";
+@import "./components/index";
+@import "./fonts";
+
+:global(*),
+:global(*:after),
+:global(*:before) {
+  @include box-sizing(border-box);
+}
+
+:global(*) {
+  user-select: none;
+  scrollbar-width: none;
+
+  font-family: 'Inter custom', sans-serif;
+}
+
+:global(body),
+:global(html) {
+  margin: 0;
+  padding: 0;
+
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+
+  font-variant: none;
+  font-smooth: always;
+
+  min-width: 320px;
+  min-height: 600px;
+
+  background: var(--background-gradient);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: var(--text-negative);
+
+  font-size-adjust:0.5;
+}
+
+:global(a:link),
+:global(a:visited),
+:global(a:hover),
+:global(a:active) {
+  text-decoration: none;
+  color: initial;
+}
+
+:global(ul) {
+  list-style-type: none;
+}
+
+:global(::-webkit-scrollbar) { 
+  display: none; 
+}
